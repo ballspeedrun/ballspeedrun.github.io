@@ -34,7 +34,7 @@ player: fyy
 
 ## Tree
 
-best record: 32s 630ms
+best record: 25s 065ms
 
 player: fyy
 
