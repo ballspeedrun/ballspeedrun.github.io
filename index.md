@@ -18,9 +18,9 @@ player: mer
 
 ## 2nd Run
 
-best record: 04s 608ms
+best record: 04s 370ms
 
-player: fyy
+player: cmll
 
 <img height="40%" width="40%" src="https://ballspeedrun.github.io/ball-record/1.png"/>
 
