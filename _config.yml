@@ -1,4 +1,70 @@
-description: Ball Parkour
-url: "https://ballspeedrun.github.io/"
-markdown: kramdown
+title: your website title
+SEOTitle: seo title
+header-img: header in explorer
+description: your description
+locale: zh
+email: "email number"
+url: "your own domain address"
+baseurl: ""
+social:
+  github: "github number"
+
+
+# Build settings
 theme: minima
+markdown: kramdown
+highlighter: rouge
+remote_theme: we can use remote theme in github by formatter:githubname/themename
+permalink: /blog/:title:output_ext
+timezone: Asia/Shanghai
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages" //layout type
+    values:
+      layout: "page" //correspond to layout
+      keywords: keywords description
+      description: description
+  -
+    scope:
+      path: ""
+      type: "posts" //layout type
+    values:
+      layout: "post" //correspond to layout
+plugins:
+  - jekyll-feed
+
+# Theme Settings
+logo: /assets/logo.svg
+rss: "/feed.xml" // subscribe
+theme_setting:
+  blog_page: "index.markdown" //detail file
+  about_page: "about.markdown" //detail file
+  archive_page: "archive.markdown" //detail file
+  nav_pages:
+    - "about.markdown" //detail file
+    - "archive.markdown" //detail file
+
+# Gitalk
+gitalk:
+  enable: true    #is open Gitalk comment
+  clientID:         #clientID from Gitalk
+  clientSecret:     #clientSecret from Gitalk
+  repo: github repo name,such as "lily.github.io"    #github repo name
+  owner: github name    #lily
+  admin: github name    #lily
+  distractionFreeMode: true #shadow
+
+# Analytics settings
+# Baidu Analytics
+ba_track_id: id from baidu
+
+# Google Analytics
+ga_track_id: 'id from google'            # Format: UA-xxxxxx-xx
+ga_domain: your domain name
+
+# description: Ball Parkour
+# url: "https://ballspeedrun.github.io/"
+# markdown: kramdown
+# theme: minima
