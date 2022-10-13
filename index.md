@@ -4,6 +4,15 @@ developer: fyy, g
 
 # Ball Speedrun Ranking List
 
+[level0 FirstRun](https://ballspeedrun.github.io/#firstrun)
+
+[level0 FirstRun](https://ballspeedrun.github.io/#firstrun)
+
+[level0 FirstRun](https://ballspeedrun.github.io/#firstrun)
+
+[level0 FirstRun](https://ballspeedrun.github.io/#firstrun)
+[level0 FirstRun](https://ballspeedrun.github.io/#firstrun)
+
 ## FirstRun:
 
 best record: 00s 770ms
