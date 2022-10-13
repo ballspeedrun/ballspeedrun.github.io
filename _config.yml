@@ -1,2 +1,5 @@
+name: Ball Speedrun Ranking List
+description: Ball Parkour
+url: "https://ballspeedrun.github.io/"
 markdown: kramdown
 theme: minima
