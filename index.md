@@ -8,7 +8,7 @@ best record: 00s 770ms
 
 player: cmll
 
-!()[https://raw.githubusercontent.com/ballspeedrun/ballspeedrun.github.io/master/ball-record/0.png]
+!(img)[https://raw.githubusercontent.com/ballspeedrun/ballspeedrun.github.io/master/ball-record/0.png]
 
 ## 2nd Run
 
