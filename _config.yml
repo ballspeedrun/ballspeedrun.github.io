@@ -1,21 +1,4 @@
-title: your website title
-SEOTitle: seo title
-header-img: header in explorer
-description: your description
-locale: zh
-email: "email number"
-url: "your own domain address"
-baseurl: ""
-social:
-  github: "github number"
-
-
-# Build settings
-theme: minima
-markdown: kramdown
-highlighter: rouge
-
 # description: Ball Parkour
 # url: "https://ballspeedrun.github.io/"
 # markdown: kramdown
-# theme: minima
+theme: minimal
