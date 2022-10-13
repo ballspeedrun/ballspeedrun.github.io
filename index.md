@@ -12,9 +12,9 @@ player: cmll
 
 <img height="40%" width="40%" src="https://ballspeedrun.github.io/ball-record/0.png"/>
 
-hack record: 00s 748ms
+hack record: 00s 746ms
 
-player: mer
+player: fyy
 
 <img height="40%" width="40%" src="https://ballspeedrun.github.io/ball-record/0-hack.png"/>
 
@@ -65,6 +65,12 @@ best record: 05s 274ms
 player: fyy
 
 <img height="40%" width="40%" src="https://ballspeedrun.github.io/ball-record/6.png"/>
+
+hack record: 05s 013ms
+
+player: g
+
+<img height="40%" width="40%" src="https://ballspeedrun.github.io/ball-record/6-hack.png"/>
 
 ## Useless Dash
 
