@@ -1,5 +1,7 @@
 [Download Game](https://github.com/ballspeedrun/ballspeedrun.github.io/tree/main/Ball)
 
+developer: fyy, g
+
 # Ball Speedrun Ranking List
 
 ## FirstRun:
@@ -55,3 +57,11 @@ best record: 15s 415ms
 player: fyy
 
 <img height="40%" width="40%" src="https://ballspeedrun.github.io/ball-record/5.png"/>
+
+## To New World
+
+best record: 06s 425ms
+
+player: g
+
+<img height="40%" width="40%" src="https://ballspeedrun.github.io/ball-record/6.png"/>
