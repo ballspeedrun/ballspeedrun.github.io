@@ -1,3 +1,5 @@
+[Download Game](https://github.com/ballspeedrun/ballspeedrun.github.io/tree/main/Ball)
+
 # Ball Speedrun Ranking List
 
 ## FirstRun:
@@ -20,6 +22,3 @@
 
 1st. 03s 159ms
 
-------
-
-[download](https://github.com/ballspeedrun/ballspeedrun.github.io/tree/main/Ball)
