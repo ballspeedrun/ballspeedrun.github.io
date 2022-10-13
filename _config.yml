@@ -1,4 +1,10 @@
 # description: Ball Parkour
 # url: "https://ballspeedrun.github.io/"
 # markdown: kramdown
-theme: minimal
+title: yourname's Blog
+subtitle: '114514'
+description: 'yourname的博客'
+keywords:
+author: yourname
+language: zh-CN
+theme: minima
