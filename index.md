@@ -30,7 +30,7 @@ best record: 08s 380ms
 
 player: fyy
 
-<img height="40%" width="40%" src="https://user-images.githubusercontent.com/72603809/195535150-bd9d183a-5ad0-45c3-818f-41f9e64f70c0.png"/>
+<img height="40%" width="40%" src="https://user-images.githubusercontent.com/72603809/195545077-11baa1a8-614b-495f-bdcd-b251ba0ee322.png"/>
 
 ## Tree
 
