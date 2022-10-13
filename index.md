@@ -8,7 +8,7 @@ best record: 00s 770ms
 
 player: cmll
 
-<img src="[https://user-images.githubusercontent.com/72603809/195535037-d2d939f6-cfd7-4d27-9437-c4a684ef5155.png]"style="height:20px;width:20px;">
+<img height=20 width=20 src="https://user-images.githubusercontent.com/72603809/195535037-d2d939f6-cfd7-4d27-9437-c4a684ef5155.png"/>
 
 ![0](https://user-images.githubusercontent.com/72603809/195535037-d2d939f6-cfd7-4d27-9437-c4a684ef5155.png)
 
