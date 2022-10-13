@@ -4,21 +4,48 @@
 
 ## FirstRun:
 
-1st. 00s 861ms
+best record: 00s 790ms
+
+player: mer
+
+!()[ball-record/0.png]
 
 ## 2nd Run
 
-1st. 04s 967ms
+best record: 04s 608ms
+
+player: fyy
+
+!()[ball-record/1.png]
 
 ## Vine Lover
 
-1st. 08s 380ms
+best record: 08s 380ms
+
+player: fyy
+
+!()[ball-record/2.png]
 
 ## Tree
 
-1st. 34s 483ms
+best record: 34s 483ms
+
+player: fyy
+
+!()[ball-record/3.png]
 
 ## Beyond The Brick
 
-1st. 03s 159ms
+best record: 03s 012ms
 
+player: fyy
+
+!()[ball-record/4.png]
+
+## R U Sure
+
+best record: 15s 415ms
+
+!()[ball-record/5.png]
+
+player: fyy
