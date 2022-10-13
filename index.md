@@ -19,5 +19,3 @@
 ### Beyond The Brick
 
 1st. 03s 159ms
-
-theme: minima
