@@ -90,7 +90,7 @@ player: fyy
 
 ## Useless Dash
 
-best record: 05s 397ms
+best record: 05s 252ms
 
 player: fyy
 
