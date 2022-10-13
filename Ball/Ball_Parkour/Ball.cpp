@@ -55,7 +55,7 @@ void towasd() {
 	else if (isupper(ch)) ch += 'a' - 'A';
 }
 namespace project_1 {
-	constexpr int xn = 50, xm = 50;
+	constexpr int xn = 200, xm = 100;
 	int nx, ny, g[xn][xn], f[xn][xn];
 	pair<int, int> a[xn][xn];
 	int nM, m;
@@ -77,43 +77,43 @@ namespace project_1 {
 		tobj[id + aux] = t;
 	}
 	void init_obj() {
-		insert_obj(20, 1, "¡ö", 0);
-		insert_obj(21, 9, "¡ö", 0);
-		insert_obj(22, 3, "¡ö", 0);
-		insert_obj(23, 11, "¡ö", 0);
-		insert_obj(24, 8, "¡ö", 0);
+		insert_obj(20, 1, "â– ", 0);
+		insert_obj(21, 9, "â– ", 0);
+		insert_obj(22, 3, "â– ", 0);
+		insert_obj(23, 11, "â– ", 0);
+		insert_obj(24, 8, "â– ", 0);
 		insert_obj(0, 0, "  ", 0); // backgrounds
-		insert_obj(1, 12, "¡ñ", 1);
-		insert_obj(2, 10, "¡ñ", 1);
-		insert_obj(3, 5, "¡ñ", 1);
-		insert_obj(4, 8, "¡ñ", 1); 
-		insert_obj(5, 9, "¡ñ", 1);
-		insert_obj(6, 11, "¡ñ", 1); 
-		insert_obj(7, 4, "¡ñ", 1);
-		insert_obj(8, 2, "¡ñ", 1);
-		insert_obj(51, 12, "¡ô", 1);
-		insert_obj(52, 10, "¡ô", 1);
-		insert_obj(53, 5, "¡ô", 1);
-		insert_obj(54, 8, "¡ô", 1); 
-		insert_obj(55, 9, "¡ô", 1);
-		insert_obj(56, 11, "¡ô", 1); 
-		insert_obj(57, 4, "¡ô", 1);
-		insert_obj(58, 2, "¡ô", 1); // player
-		insert_obj(-1, 7, "¡ö", 2);
-		insert_obj(-11, 11, "¡ö", 2);
-		insert_obj(-14, 14, "¡ö", 2);
-		insert_obj(-15, 15, "¡ö", 2);// barrier
-		insert_obj(30, 13, "¡ö", 3); // teleport
-		insert_obj(-2, 6, "¡ø", 4);
-		insert_obj(-3, 6, "¨‹", 4);
-		insert_obj(-20, 15, "¡ø", 4);
-		insert_obj(-21, 15, "¨‹", 4);
-		insert_obj(-22, 13, "¡è", 4); // spike
-		insert_obj(-40, 14, "¨ˆ ", 5);
-		insert_obj(-41, 2, "¨ˆ ", 5); // sand
-		insert_obj(40, 14, "¡ï", 6); // crown
-		insert_obj(-30, 14, "¡õ", 7);
-		insert_obj(-31, 6, "¡õ", 7); // tricky square
+		insert_obj(1, 12, "â—", 1);
+		insert_obj(2, 10, "â—", 1);
+		insert_obj(3, 5, "â—", 1);
+		insert_obj(4, 8, "â—", 1); 
+		insert_obj(5, 9, "â—", 1);
+		insert_obj(6, 11, "â—", 1); 
+		insert_obj(7, 4, "â—", 1);
+		insert_obj(8, 2, "â—", 1);
+		insert_obj(51, 12, "â—†", 1);
+		insert_obj(52, 10, "â—†", 1);
+		insert_obj(53, 5, "â—†", 1);
+		insert_obj(54, 8, "â—†", 1); 
+		insert_obj(55, 9, "â—†", 1);
+		insert_obj(56, 11, "â—†", 1); 
+		insert_obj(57, 4, "â—†", 1);
+		insert_obj(58, 2, "â—†", 1); // player
+		insert_obj(-1, 7, "â– ", 2);
+		insert_obj(-11, 11, "â– ", 2);
+		insert_obj(-14, 14, "â– ", 2);
+		insert_obj(-15, 15, "â– ", 2);// barrier
+		insert_obj(30, 13, "â– ", 3); // teleport
+		insert_obj(-2, 6, "â–²", 4);
+		insert_obj(-3, 6, "â–¼", 4);
+		insert_obj(-20, 15, "â–²", 4);
+		insert_obj(-21, 15, "â–¼", 4);
+		insert_obj(-22, 13, "Â¤", 4); // spike
+		insert_obj(-40, 14, "â–“ ", 5);
+		insert_obj(-41, 2, "â–“ ", 5); // sand
+		insert_obj(40, 14, "â˜…", 6); // crown
+		insert_obj(-30, 14, "â–¡", 7);
+		insert_obj(-31, 6, "â–¡", 7); // tricky square
 	}
 	int t_obj(int x, int y) {
 		return tobj[g[x][y] + aux];
@@ -277,15 +277,15 @@ namespace project_1 {
 	void print_mode() {
 		cls();
 		col(0, 11);
-		cout << " ¡ô select mode ¡ô\n\n";
+		cout << " â—† select mode â—†\n\n";
 		for (int i = 0; i < nM; ++i) {
 			col(0, i == m ? 14 : 15);
 			cout << "   " << name[i] << '\n';
 		}
 		col(0, 11);
-		cout << "\n ¡ô select skin ¡ô\n\n";
+		cout << "\n â—† select skin â—†\n\n";
 		col(0, cobj[player.object + aux]);
-		cout << "   ¡ñ\n";
+		cout << "   â—\n";
 		for (; (ch = getch()); ) {
 			towasd();
 			if (ch == ' ') return;
@@ -318,7 +318,7 @@ namespace project_1 {
 				}
 				jump(3, 5 + nM);
 				col(0, cobj[player.object + aux]);
-				cout << "¡ñ";
+				cout << "â—";
 			}
 		}
 	}
@@ -337,15 +337,21 @@ namespace project_1 {
 		alive = true;
 		FI(m);
 		cin >> nx >> ny;
-		for (int i = 0; i <= nx + 1; ++i) f[i][0] = g[i][0] = f[i][ny + 1] = g[i][ny + 1] = -1;
-		for (int j = 1; j <= ny; ++j) f[0][j] = g[0][j] = f[nx + 1][j] = g[nx + 1][j] = -1;
-		for (int i = 1; i <= nx; ++i) for (int j = 1; j <= ny; ++j) {
+		int sx = 0, sy = 0, _nx = nx, _ny = ny;
+		_nx = ((nx - 1) / 30 + 1) * 30;
+		sx = (_nx - nx) / 2;
+		_ny = ((ny - 1) / 30 + 1) * 30;
+		sy = (_ny - ny) / 2;
+		for (int i = sx + 1; i <= sx + nx; ++i) for (int j = sy + 1; j <= sy + ny; ++j) {
 			cin >> g[i][j];
 			f[i][j] = t_obj(i, j) == 5 or t_obj(i, j) == 1 ? 0 : g[i][j];
 			if (t_obj(i, j) == 3) cin >> a[i][j].first >> a[i][j].second;
 			else if (t_obj(i, j) == 1) player.init(i, j);
 			else if (t_obj(i, j) == 6) cin >> a[i][j].first;
 		}
+		for (int i = 0; i <= _nx + 1; ++i) for (int j = 0; j <= _ny + 1; ++j) if (!(sx + 1 <= i and i <= sx + nx) or !(sy + 1 <= j and j <= sy + ny)) f[i][j] = g[i][j] = -1; 
+		nx = _nx;
+		ny = _ny;
 		cls();
 		for (int i = 1; i <= nx; ++i) for (int j = 1; j <= ny; ++j) print(i, j);
 		freopen("CON.in", "r", stdin);
@@ -353,14 +359,12 @@ namespace project_1 {
 	void run() {
 		print_mode();
 		init_map();
-//		Sleep(300);
-//		for (; kbhit(); ) ch = getch();
 		auto T = getTs();
-		jump(0, nx + 1);
+		jump(0, 30 + 1);
 		col(0, 15);
 		cout << "time : 0.000";
 		if (best[m] >= 0) {
-			jump(0, nx + 3);
+			jump(0, 30 + 3);
 			cout << "best : " << best[m];
 		}
 		for (; alive and !win; ) {
@@ -374,20 +378,20 @@ namespace project_1 {
 				else if (ch == 'd') player.D();
 			}
 			player.free();
-			jump(7, nx + 1);
+			jump(7, 30 + 1);
 			col(0, 15);
 			cout << getTs() - T;
 		}
 		if (win) {
 			jump_g(player.X, player.Y);
 			col(0, cobj[player.object + aux]);
-			cout << "¢Ù";
+			cout << "â‘ ";
 			double useT = getTs() - T;
 			if (best[m] < 0 or useT < best[m]) {
-				jump(7, nx + 1);
+				jump(7, 30 + 1);
 				cout << useT;
 				if (best[m] >= 0) {
-					jump(6, nx + 4);
+					jump(6, 30 + 4);
 					cout << "-" << best[m] - useT;
 					best[m] = useT;
 				}
@@ -396,7 +400,7 @@ namespace project_1 {
 		}
 		Sleep(500);
 		for (; kbhit(); ) ch = getch();
-		jump(0, nx + 5);
+		jump(0, 30 + 5);
 		col(0, 15);
 		printf("input any key to continue.");
 		while (true) if (kbhit()) {
@@ -417,9 +421,9 @@ void play() {
 	col(0, 15);
 	puts("<Ball Fight>\n");
 	col(0, 12);
-	puts("¡ñ");
+	puts("â—");
 	col(0, 7);
-	puts("¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö\n");
+	puts("â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– \n");
 	col(0, 15);
 	puts("input any key to start.");
 	clock_t tim = clock(), now = clock();
@@ -437,13 +441,13 @@ void play() {
 			printf("  ");
 			ago1 += 2;
 			jump(ago1 % 30, 3);
-			printf("¡ñ");
+			printf("â—");
 			jump(ago2 % 30, 3);
 			col(0, 10);
 			printf("  ");
 			ago2 += 2;
 			jump(ago2 % 30, 3);
-			printf("¡ñ");
+			printf("â—");
 			sk = double(now - tim) / CLOCKS_PER_SEC;
 		}
 	}
@@ -453,8 +457,7 @@ int main() {
 	cout << fixed << setprecision(3);
 	HideCursor();
 	system("title Ball Parkour");
-	system("mode con cols=100 lines=60");
+	system("mode con cols=60 lines=36");
 	play();
 	return 0;
 }
-
