@@ -60,8 +60,16 @@ player: fyy
 
 ## To New World
 
-best record: 06s 425ms
+best record: 05s 274ms
 
-player: g
+player: fyy
 
 <img height="40%" width="40%" src="https://ballspeedrun.github.io/ball-record/6.png"/>
+
+## Useless Dash
+
+best record: 05s 552ms
+
+player: fyy
+
+<img height="40%" width="40%" src="https://ballspeedrun.github.io/ball-record/7.png"/>
