@@ -60,15 +60,15 @@ player: fyy
 
 ## To New World
 
-best record: 05s 274ms
+best record: 04s 969ms
 
 player: fyy
 
 <img height="40%" width="40%" src="https://ballspeedrun.github.io/ball-record/6.png"/>
 
-hack record: 05s 013ms
+hack record: 04s 209ms
 
-player: g
+player: fyy
 
 <img height="40%" width="40%" src="https://ballspeedrun.github.io/ball-record/6-hack.png"/>
 
