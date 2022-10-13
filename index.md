@@ -8,6 +8,8 @@ best record: 00s 770ms
 
 player: cmll
 
+<img height="40%" width="40%" src="https://ballspeedrun.github.io/ball-record/0.png"/>
+
 <img height="40%" width="40%" src="https://user-images.githubusercontent.com/72603809/195535037-d2d939f6-cfd7-4d27-9437-c4a684ef5155.png"/>
 
 hack record: 00s 748ms
