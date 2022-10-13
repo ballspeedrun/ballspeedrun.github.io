@@ -14,24 +14,6 @@ social:
 theme: minima
 markdown: kramdown
 highlighter: rouge
-remote_theme: we can use remote theme in github by formatter:githubname/themename
-defaults:
-  -
-    scope:
-      path: ""
-      type: "pages" //layout type
-    values:
-      layout: "page" //correspond to layout
-      keywords: keywords description
-      description: description
-  -
-    scope:
-      path: ""
-      type: "posts" //layout type
-    values:
-      layout: "post" //correspond to layout
-plugins:
-  - jekyll-feed
 
 # description: Ball Parkour
 # url: "https://ballspeedrun.github.io/"
