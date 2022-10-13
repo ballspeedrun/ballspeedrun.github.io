@@ -8,6 +8,7 @@ best record: 00s 770ms
 
 player: cmll
 
+<img src = "[img link]" style = "height : 20px; width : 20px;">
 ![0](https://user-images.githubusercontent.com/72603809/195535037-d2d939f6-cfd7-4d27-9437-c4a684ef5155.png)
 
 hack record: 00s 748ms
@@ -34,11 +35,11 @@ player: fyy
 
 ## Tree
 
-best record: 34s 483ms
+best record: 32s 630ms
 
 player: fyy
 
-![3](https://user-images.githubusercontent.com/72603809/195535165-26c93280-eaef-4cbf-b818-5e729619a310.png)
+![3](https://user-images.githubusercontent.com/72603809/195540926-25e97d0c-8d0f-4712-847a-89ed505b0dd6.png)
 
 ## Beyond The Brick
 
