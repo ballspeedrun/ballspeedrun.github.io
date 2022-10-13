@@ -42,7 +42,7 @@ player: fyy
 
 ## Beyond The Brick
 
-best record: 03s 012ms
+best record: 02s 858ms
 
 player: fyy
 
