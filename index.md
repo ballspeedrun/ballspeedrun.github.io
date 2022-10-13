@@ -26,7 +26,7 @@ player: fyy
 
 ## Vine Lover
 
-best record: 08s 380ms
+best record: 08s 300ms
 
 player: fyy
 
