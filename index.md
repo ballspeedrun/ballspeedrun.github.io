@@ -46,6 +46,6 @@ player: fyy
 
 best record: 15s 415ms
 
-!()[https://raw.githubusercontent.com/ballspeedrun/ballspeedrun.github.io/master/ball-record/5.png]
-
 player: fyy
+
+!()[https://raw.githubusercontent.com/ballspeedrun/ballspeedrun.github.io/master/ball-record/5.png]
