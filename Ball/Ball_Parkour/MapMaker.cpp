@@ -66,10 +66,10 @@ namespace project_2 {
 		cobj[id + aux] = c;
 		sobj[id + aux] = s;
 		tobj[id + aux] = t;
-		if (t != 1 or id == 1) objs.push_back(id);
+		if ((t != 1 or id == 1) and id != -100) objs.push_back(id);
 	}
 	void init_obj() {
-//		insert_obj()
+		insert_obj(-100, 7, "â–¡", -1);
 		freopen("objects.in", "r", stdin);
 		int nobj;
 		cin >> nobj;
@@ -86,7 +86,7 @@ namespace project_2 {
 		sort(V(objs));
 	}
 	int get_g(int x, int y) {
-		if (x < 0 or x >= nx or y < 0 or y >= ny) return -1;
+		if (x < 0 or x >= nx or y < 0 or y >= ny) return -100;
 		return g[x][y];
 	}
 	int X, Y, cur;
@@ -183,11 +183,11 @@ namespace project_2 {
 void play() {
 	jump(4, 1);
 	col(0, 11);
-	cout << " ¡ô Ball Mapmaker ¡ô\n\n";
+	cout << " â—† Ball Mapmaker â—†\n\n";
 	col(0, 12);
-	puts("¡ñ");
+	puts("â—");
 	col(0, 7);
-	puts("¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö\n");
+	puts("â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– \n");
 	col(0, 15);
 	puts("input any key to start.");
 	clock_t tim = clock(), now = clock();
@@ -205,13 +205,13 @@ void play() {
 			printf("  ");
 			ago1 += 2;
 			jump(ago1 % 30, 3);
-			printf("¡ñ");
+			printf("â—");
 			jump(ago2 % 30, 3);
 			col(0, 10);
 			printf("  ");
 			ago2 += 2;
 			jump(ago2 % 30, 3);
-			printf("¡ñ");
+			printf("â—");
 			sk = double(now - tim) / CLOCKS_PER_SEC;
 		}
 	}
@@ -225,4 +225,3 @@ int main() {
 	play();
 	return 0;
 }
-
