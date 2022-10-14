@@ -36,7 +36,7 @@ player: fyy
 
 ## 2nd Run
 
-best record: 04s 223ms
+best record: 03s 246ms
 
 player: fyy
 
