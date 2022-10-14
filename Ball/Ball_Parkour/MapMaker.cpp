@@ -69,7 +69,7 @@ namespace project_2 {
 		if ((t != 1 or id == 1) and id != -100) objs.push_back(id);
 	}
 	void init_obj() {
-		insert_obj(-100, 7, "¡õ", -1);
+		insert_obj(-100, 7, "â–¡", -1);
 		freopen("objects.in", "r", stdin);
 		int nobj;
 		cin >> nobj;
@@ -191,6 +191,7 @@ namespace project_2 {
 		}
 		freopen("CON.out", "w", stdout);
 		jump(0, 0);
+		col(0, 15);
 		cout << "map saved successfully! go check [map].\n\n";
 		cout << "P.S. you need to set the infos about tp gates and stars and jellyfishes and something else like these yourself.\n\n";
 	}
@@ -198,11 +199,11 @@ namespace project_2 {
 void play() {
 	jump(4, 1);
 	col(0, 11);
-	cout << " ¡ô Ball Mapmaker ¡ô\n\n";
+	cout << " â—† Ball Mapmaker â—†\n\n";
 	col(0, 12);
-	puts("¡ñ");
+	puts("â—");
 	col(0, 7);
-	puts("¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö\n");
+	puts("â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– \n");
 	col(0, 15);
 	puts("input any key to start.");
 	clock_t tim = clock(), now = clock();
@@ -220,13 +221,13 @@ void play() {
 			printf("  ");
 			ago1 += 2;
 			jump(ago1 % 30, 3);
-			printf("¡ñ");
+			printf("â—");
 			jump(ago2 % 30, 3);
 			col(0, 10);
 			printf("  ");
 			ago2 += 2;
 			jump(ago2 % 30, 3);
-			printf("¡ñ");
+			printf("â—");
 			sk = double(now - tim) / CLOCKS_PER_SEC;
 		}
 	}
