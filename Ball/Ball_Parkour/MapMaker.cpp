@@ -29,8 +29,8 @@ bool cls_init = false;
 void getcls() {
 	cls_init = true;
 	int x = 0;
-	for (int i = 0; i < 15; ++i) {
-		for (int j = 0; j < 30; ++j) cls_str[x++] = ' ';
+	for (int i = 0; i < 36; ++i) {
+		for (int j = 0; j < 60; ++j) cls_str[x++] = ' ';
 		cls_str[x++] = '\n';
 	}
 }
@@ -91,16 +91,21 @@ namespace project_2 {
 	}
 	int X, Y, cur;
 	void print() {
-		cls();
-		jump(0, 0);
-		for (int i = -7; i <= 7; ++i) {			
-			for (int j = -7; j <= 7; ++j) {
+		static int print_x = -1, print_y = -1;
+		for (int i = -14; i <= 14; ++i) {			
+			for (int j = -14; j <= 14; ++j) {
+				if ((abs(i) > 1 or abs(j) > 1) and ~print_x and get_g(print_x + i, print_y + j) == get_g(X + i, Y + j)) continue;
 				if (i or j) col(0, cobj[get_g(X + i, Y + j) + aux]);
 				else col(8, cobj[get_g(X + i, Y + j) + aux]);
+				jump((j + 14) * 2, i + 14);
 				cout << sobj[get_g(X + i, Y + j) + aux];
 			}
-			cout << '\n';
 		}
+		print_x = X;
+		print_y = Y;
+		col(0, 15);
+		jump(2, 30);
+		cout << "X: " << setw(3) << X << " Y: " << setw(3) << Y << '\n'; 
 	}
 	void work() {
 		init_obj();
@@ -108,6 +113,7 @@ namespace project_2 {
 		col(0, 15);
 		cout << "imput [nx] [ny]: ";
 		cin >> nx >> ny;
+		cls();
 		X = Y = cur = 0;
 		print();
 		while (true) if (kbhit()) {
@@ -145,17 +151,15 @@ namespace project_2 {
 			}
 			if (ch == 'q') {
 				(cur += N(objs) - 1) %= N(objs);
-				assert(0 <= cur and cur < N(objs)); 
 				g[X][Y] = objs[cur];
-				jump(14, 7);
+				jump(28, 14);
 				col(8, cobj[g[X][Y] + aux]);
 				cout << sobj[g[X][Y] + aux];
 			}
 			if (ch == 'e') {
 				(cur += 1) %= N(objs);
-				assert(0 <= cur and cur < N(objs));
 				g[X][Y] = objs[cur];
-				jump(14, 7);
+				jump(28, 14);
 				col(8, cobj[g[X][Y] + aux]);
 				cout << sobj[g[X][Y] + aux];
 			}
@@ -164,20 +168,13 @@ namespace project_2 {
 		freopen("map.out", "w", stdout);
 		cout << nx << ' ' << ny << '\n';
 		for (int i = 0; i < nx; ++i) {
-			for (int j = 0; j < ny; ++j) {
-				int t = tobj[g[i][j] + aux];
-				cout << g[i][j] << '\t';
-				if (t == 6 or t == 3) cout << a[i][j].first;
-				cout << '\t';
-				if (t == 3) cout << a[i][j].second;
-				cout << '\t';
-			}
+			for (int j = 0; j < ny; ++j) cout << g[i][j] << "\t\t\t";
 			cout << '\n';
 		}
 		freopen("CON.out", "w", stdout);
 		jump(0, 0);
 		cout << "map saved successfully! go check [map.out].\n\n";
-		cout << "P.S. you need to set the infos about tp gates or stars yourself.\n\n";
+		cout << "P.S. you need to set the infos about tp gates and stars and jellyfishes and something else like these yourself.\n\n";
 	}
 };
 void play() {
