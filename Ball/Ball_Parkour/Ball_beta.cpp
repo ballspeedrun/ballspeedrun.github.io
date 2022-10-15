@@ -319,19 +319,19 @@ namespace project_1 {
 			}
 		}
 	}
-	void FI(int x) {
+	const char* levelin(int x) {
 		string s = "level", y;
 		stringstream ss;
 		ss << x;
 		ss >> y;
 		s = s + y;
 		s = s + ".in";
-		freopen(s.c_str(), "r", stdin);
+		return s.c_str();
 	}
 	void init_map() {
 		score = 0;
 		win = false;
-		FI(m);
+		freopen(levelin(m), "r", stdin);
 		cin >> nx >> ny;
 		for (int i = 0; i < nx; ++i) for (int j = 0; j < ny; ++j) {
 			cin >> g[i][j];
@@ -468,4 +468,3 @@ int main() {
 	play();
 	return 0;
 }
-
