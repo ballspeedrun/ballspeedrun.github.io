@@ -107,14 +107,24 @@ namespace project_2 {
 		jump(2, 30);
 		cout << "X: " << setw(3) << X << " Y: " << setw(3) << Y << '\n'; 
 	}
+	const char* levelin(int x) {
+		string s = "level", y;
+		stringstream ss;
+		ss << x;
+		ss >> y;
+		s = s + y;
+		s = s + ".in";
+		return s.c_str();
+	}
 	void work() {
 		init_obj();
 		cls();
 		col(0, 15);
-		cout << "imput [nx] [ny]: ";
-		cin >> nx >> ny;
+		int level;
+		cout << "imput [nx] [ny] [level]: ";
+		cin >> nx >> ny >> level;
 		if (!nx and !ny) {
-			freopen("map.sav", "r", stdin);
+			freopen(levelin(level), "r", stdin);
 			cin >> nx >> ny;
 			for (int i = 0; i < nx; ++i) for (int j = 0; j < ny; ++j) {
 				cin >> g[i][j];
@@ -175,7 +185,7 @@ namespace project_2 {
 				cout << sobj[g[X][Y] + aux];
 			}
 		}
-		freopen("map.sav", "w", stdout);
+		freopen(levelin(level), "w", stdout);
 		cout << nx << ' ' << ny << '\n';
 		for (int i = 0; i < nx; ++i) {
 			for (int j = 0; j < ny; ++j) {
@@ -192,7 +202,7 @@ namespace project_2 {
 		jump(0, 0);
 		col(0, 15);
 		cls();
-		cout << "map saved successfully! go check [map.sav].\n\n";
+		cout << "map saved successfully! go check [" << levelin(level) << "].\n\n";
 		cout << "P.S. you need to set the infos about tp gates and stars and jellyfishes and something else like these yourself.\n\n";
 	}
 };
