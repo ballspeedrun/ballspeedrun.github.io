@@ -191,7 +191,7 @@ namespace project_1 {
 	void auto_up() {
 		if (getTs() - tup < 0.2)
 			return;
-		if (block_side(X - 1, Y)) {
+		if (block_side(X - 1, Y)) { 
 			if (real_tobj(X - 1, Y) == 4) {
 				falin = true;
 				fall_cnt = (aut_up + 1) / 2;
@@ -351,19 +351,19 @@ namespace project_1 {
 			}
 		}
 	}
-	const char* levelin(int x) {
+	string levelin(int x) {
 		string s = "level", y;
 		stringstream ss;
 		ss << x;
 		ss >> y;
 		s = s + y;
 		s = s + ".in";
-		return s.c_str();
+		return s;
 	}
 	void init_map() {
 		score = 0;
 		win = false;
-		freopen(levelin(m), "r", stdin);
+		freopen(levelin(m).c_str(), "r", stdin);
 		cin >> nx >> ny;
 		for (int i = 0; i < nx; ++i) for (int j = 0; j < ny; ++j) {
 			cin >> g[i][j];
