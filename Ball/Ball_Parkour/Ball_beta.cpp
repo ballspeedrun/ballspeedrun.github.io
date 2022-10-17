@@ -258,7 +258,7 @@ namespace project_1 {
 				print();
 			}
 			if (falin) {
-				if (real_tobj(X + 1, Y) == 4 and fall_cnt) {
+				if (real_tobj(X + 1, Y) == 4 and fall_cnt and !block_side(X - 1, Y)) {
 					if (cnt_up != 1) {
 						cnt_up = 1;
 						print();
@@ -354,7 +354,7 @@ namespace project_1 {
 				cout << "¡ñ";
 			}
 			else if (ch == 'q' or ch == 'e') {
-				if (ch == 'q' and print_R0 > 3) print_R0 -= 1;
+				if (ch == 'q' and print_R0 > max(3, print_R1)) print_R0 -= 1;
 				if (ch == 'e' and print_R0 < 14) print_R0 += 1;
 				jump(3, 9 + nM);
 				col(0, 14);
