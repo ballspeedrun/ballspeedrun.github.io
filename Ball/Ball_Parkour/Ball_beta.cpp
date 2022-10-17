@@ -117,11 +117,19 @@ namespace project_1 {
 		auto t = real_tobj(x, y);
 		return t == 2 or t == 5 or t == 7 or t == 4;
 	}
+	bool bot_side(int x,int y){
+		int t=get_tobj(x,y);
+		return t==2||t==3||t==4||t==5||t==6;
+	}
+	bool bot_side_init(int x,int y){
+		int t=get_tobj(x,y);
+		return t==2||t==4||t==5||t==6;
+	}
 	int score;
 	bool win;
 	int X, Y, object;
 	int cnt_up, aut_up, lst, fall_cnt;
-	bool falin, bouncin;
+	bool falin, bouncin, bot_rinit;
 	double tlst, tup, tfall, speed;
 	void place(int x, int y) {
 		X = x;
@@ -149,12 +157,16 @@ namespace project_1 {
 			speed = 0.2;
 			fall_cnt = 0;
 			falin = false;
+			bot_rinit=1;
 		} 
 		tie(x, y) = exfind(x, y);
 		place(x, y);
 		int t = get_tobj(X, Y);
 		if (t == 6 and score >= a[X][Y].first) win = true;
 		print();
+	}
+	void botkill() {
+		moveto(a[X][Y].first,a[X][Y].second),bot_rinit=1;
 	}
 	void init(int x, int y) {
 		place(x, y);
@@ -342,7 +354,7 @@ namespace project_1 {
 				cout << "¡ñ";
 			}
 			else if (ch == 'q' or ch == 'e') {
-				if (ch == 'q' and print_R0 > max(3, print_R1)) print_R0 -= 1;
+				if (ch == 'q' and print_R0 > 3) print_R0 -= 1;
 				if (ch == 'e' and print_R0 < 14) print_R0 += 1;
 				jump(3, 9 + nM);
 				col(0, 14);
@@ -366,7 +378,185 @@ namespace project_1 {
 		s = s + ".in";
 		return s;
 	}
+	const int maxD=10,inf=1e9,maxCnum=maxD*maxD+(maxD+1)*(maxD+1);
+	const int dx[4]={-1,1,0,0},dy[4]={0,0,-1,1};
+	struct node{
+		int x,y;
+		node(int _x=0,int _y=0){x=_x,y=_y;}
+		node(pair<int,int>_x){x=_x.first,y=_x.second;}
+		int dis(node o){
+			return abs(x-o.x)+abs(y-o.y);
+		}
+		friend bool operator==(node x,node y){
+			return x.x==y.x&&x.y==y.y;
+		}
+		friend bool operator!=(node x,node y){
+			return x.x!=y.x||x.y!=y.y;
+		}
+		friend node operator+(node x,node y){
+			return node(x.x+y.x,x.y+y.y);
+		}
+		bool valid(){
+			return x>=0&&x<nx&&y>=0&&y<ny;
+		}
+	};
+	int id(int x,int y){
+		return x*ny+y;
+	}
+	int id(node x){
+		return id(x.x,x.y);
+	}
+	node id(int x){
+		return node(x/ny,x%ny);
+	}
+	struct botfish_d{
+		int d,cnum,que[xn*xn],nid[xn*xn],idx;
+		node rnid[maxCnum];
+		double lwk;
+		void bfs(int s,int*dis,int d){
+			node sn=rnid[s];
+			int l=0,r=-1;
+			dis[s]=0,que[++r]=s;
+			while(l<=r){
+				int u=que[l++];
+				node un=rnid[u];
+				for(int i=0;i<4;i++){
+					node vn=un+node(dx[i],dy[i]);
+					if(!vn.valid()||sn.dis(vn)>d||bot_side_init(vn.x,vn.y))continue;
+					int v=nid[id(vn)];
+					if(dis[v]==inf)dis[v]=dis[u]+1,que[++r]=v;
+				}
+			}
+		}
+		int dis[xn*xn][maxCnum];
+		void init(int _d){
+			d=_d,cnum=d*d+(d+1)*(d+1);
+			for(int i=0;i<nx;i++)
+				for(int j=0;j<ny;j++){
+					for(int k=0;k<cnum;k++)
+						dis[id(i,j)][k]=inf;
+					idx=0;
+					for(int k=i-d;k<=i+d;k++)
+						for(int l=j-d;l<=j+d;l++){
+							if(node(i,j).dis(node(k,l))>d)continue;
+							rnid[idx]=node(k,l);
+							if(node(k,l).valid())nid[id(k,l)]=idx;
+							idx++;
+						}
+					assert(idx<=cnum);
+					bfs(nid[id(i,j)],dis[id(i,j)],d);
+				}
+		}
+	}bf_d;
+	struct botfish{
+		int x,y,d;
+		botfish(int _x,int _y){
+			x=_x,y=_y,d=maxD;
+		}
+		int nid(int _x,int _y){
+			_x-=X,_y-=Y;
+			int td=bf_d.d;
+			if(_x<=0)return (td+_x)*(td+_x)+(_y-(-d-_x));
+			_x=-_x,_y=-_y;
+			return bf_d.cnum-1-nid(_x+X,_y+Y);
+		}
+		int dis1(int _x,int _y){
+			return bf_d.dis[id(X,Y)][nid(_x,_y)];
+		}
+		int dis1(node _x){
+			return dis1(_x.x,_x.y);
+		}
+		int dis1(){
+			return dis1(x,y);
+		}
+		int dis2(int _x,int _y){
+			return node(X,Y).dis(node(_x,_y));
+		}
+		int dis2(node _x){
+			return dis2(_x.x,_x.y);
+		}
+		int dis2(){
+			return dis2(x,y);
+		}
+		void move(node to){
+			g[to.x][to.y]=g[x][y];
+			a[to.x][to.y]=a[x][y];
+			g[x][y]=f[x][y];
+			x=to.x,y=to.y;
+			print();
+			if(node(x,y)==node(X,Y))botkill();
+		}
+		bool work1(){
+			node now=node(x,y),to=now;
+			for(int i=0;i<4;i++){
+				node v=now+node(dx[i],dy[i]);
+				if(!v.valid()||dis2(v)>d||bot_side(v.x,v.y))continue;
+				if(dis1(v)<dis1(to))to=v;
+			}
+			if(to!=now)return move(to),1;
+			return 0;
+		}
+		bool work2(){
+			node now=node(x,y),to=now;
+			for(int i=0;i<4;i++){
+				node v=now+node(dx[i],dy[i]);
+				if(!v.valid()||bot_side(v.x,v.y))continue;
+				if(dis2(v)<dis2(to))to=v;
+			}
+			if(to!=now)return move(to),1;
+			return 0;
+		}
+		bool work(){
+			if(dis2()<=d)return work1();
+			return work2();
+		}
+	};
+	vector<botfish>jelly,jelly_tmp;
+	void bot_init(){
+		bf_d.init(maxD);
+		bf_d.lwk=getTs();
+	}
+	void bot_clear(){
+		jelly.clear();
+		jelly_tmp.clear();
+	}
+	void bot_reinit(){
+		for(int i=0,sz=jelly.size();i<sz;i++){
+			int x=jelly[i].x,y=jelly[i].y;
+			reduct(x,y);
+		}
+		jelly=jelly_tmp;
+		for(int i=0,sz=jelly.size();i<sz;i++){
+			int x=jelly[i].x,y=jelly[i].y;
+			g[x][y]=-23;
+		}
+		bf_d.lwk=getTs();
+		print();
+		bot_rinit=0;
+	}
+	void bot_work(){
+		if((getTs()-bf_d.lwk)*1000<740)return;
+		bf_d.lwk=getTs();
+		vector<int>del,mq;
+		for(int i=0,sz=jelly.size();i<sz;i++)
+			mq.push_back(i);
+		while(1){
+			del.clear();
+			for(auto i:mq)
+				if(jelly[i].work())del.push_back(i);
+			vector<int>tmp;
+			int x=0,sz=mq.size();
+			for(auto i:del){
+				while(mq[x]!=i)tmp.push_back(mq[x++]);
+				x++;
+			}
+			while(x<sz)tmp.push_back(mq[x++]);
+			mq=tmp;
+			if(del.empty())break;
+		}
+	}
 	void init_map() {
+		bot_clear();
 		score = 0;
 		win = false;
 		freopen(levelin(m).c_str(), "r", stdin);
@@ -378,11 +568,16 @@ namespace project_1 {
 			else if (get_tobj(i, j) == 1) init(i, j);
 			else if (get_tobj(i, j) == 6) cin >> a[i][j].first;
 		}
+		for(int i=0;i<nx;i++)
+			for(int j=0;j<ny;j++)
+				if(g[i][j]==-23)jelly.push_back(botfish(i,j)),f[i][j]=0;
+		jelly_tmp=jelly;
 		cls();
 		print_x = print_y = -1;
 		memset(print_g, 0, sizeof print_g);
 		print();
 		freopen("CON", "r", stdin);
+		bot_init();
 	}
 	bool skip0, skip1;
 	void run() {
@@ -410,6 +605,8 @@ namespace project_1 {
 				else if (ch == 'd') D();
 			}
 			free();
+			bot_work();
+			if(bot_rinit)bot_reinit();
 			col(0, 15);
 			jump(7, 29 + 1);
 			cout << getTs() - T;
