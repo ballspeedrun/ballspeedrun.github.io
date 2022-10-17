@@ -1,6 +1,8 @@
-[Download Game](https://github.com/ballspeedrun/ballspeedrun.github.io/tree/main/Ball)
+[Download Game](https://github.com/ballspeedrun/ballspeedrun.github.io)（点绿色的 `Code` 然后 Download Zip）。
 
 developer: fyy, g
+
+QQ 群号：670871016。
 
 # Ball Speedrun Ranking List
 
