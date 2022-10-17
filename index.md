@@ -12,7 +12,7 @@ developer: fyy, g
 
 [level3 Tree](https://ballspeedrun.github.io/#tree)
 
-[level4 Beyond The Brick](https://ballspeedrun.github.io/#beyond-the-brick)
+[level4 It is Possible](https://ballspeedrun.github.io/#it-is-possible)
 
 [level5 R U Sure](https://ballspeedrun.github.io/#r-u-sure)
 
@@ -70,11 +70,11 @@ player: fyy
 
 <img height="40%" width="40%" src="https://ballspeedrun.github.io/ball-record/3.png"/>
 
-## Beyond The Brick
+## It is Possible
 
-best record: none
+best record: 02s 919ms
 
-player: none
+player: fyy
 
 <img height="40%" width="40%" src="https://ballspeedrun.github.io/ball-record/4.png"/>
 
