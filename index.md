@@ -144,7 +144,7 @@ player: fyy
 
 ## Hello Tracker
 
-best record: 00s 952ms
+best record: 00s 948ms
 
 player: fyy
 
