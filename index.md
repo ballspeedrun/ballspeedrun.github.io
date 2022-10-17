@@ -30,6 +30,8 @@ developer: fyy, g
 
 [level12 Long one](https://ballspeedrun.github.io/#long-one)
 
+[level13 Hello Tracker](https://ballspeedrun.github.io/#hello-tracker)
+
 ## FirstRun:
 
 best record: 00s 760ms
@@ -139,3 +141,11 @@ best record: 41s 290ms
 player: fyy
 
 <img height="40%" width="40%" src="https://ballspeedrun.github.io/ball-record/12.png"/>
+
+## Hello Tracker
+
+best record: 01s 715ms
+
+player: fyy
+
+<img height="40%" width="40%" src="https://ballspeedrun.github.io/ball-record/13.png"/>
