@@ -145,6 +145,11 @@ namespace project_1 {
 	}
 	void moveto(int x, int y) {
 		reduct(X, Y);
+		if (get_tobj(x, y) == 3) {
+			speed = 0.2;
+			fall_cnt = 0;
+			falin = false;
+		} 
 		tie(x, y) = exfind(x, y);
 		place(x, y);
 		int t = get_tobj(X, Y);
@@ -153,7 +158,8 @@ namespace project_1 {
 	}
 	void init(int x, int y) {
 		place(x, y);
-		aut_up = lst = falin = bouncin = fall_cnt = 0;
+		aut_up = lst = fall_cnt = 0;
+		falin = bouncin = false;
 		cnt_up = 1;
 		tlst = tup = tfall = getTs() - 0.3;
 		speed = 0.2;
@@ -222,14 +228,14 @@ namespace project_1 {
 		lst = -1;
 		if (cnt_up) return;
 		tlst = getTs();
-		if (block_side(X, Y - 1)) return;
+		if (block_side(X, Y - 1) or !block_side(X + 1, Y)) return;
 		moveto(X, Y - 1);
 	}
 	void right() {
 		lst = +1;
 		if (cnt_up) return;
 		tlst = getTs();
-		if (block_side(X, Y + 1)) return;
+		if (block_side(X, Y + 1) or !block_side(X + 1, Y)) return;
 		moveto(X, Y + 1);
 	}
 	void free() {
