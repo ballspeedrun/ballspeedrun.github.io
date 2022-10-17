@@ -104,9 +104,9 @@ player: fyy
 
 ## Temple
 
-best record: none
+best record: 53m 59s 906ms
 
-player: none
+player: g
 
 <img height="40%" width="40%" src="https://ballspeedrun.github.io/ball-record/8.png"/>
 
