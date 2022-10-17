@@ -342,7 +342,7 @@ namespace project_1 {
 				cout << "¡ñ";
 			}
 			else if (ch == 'q' or ch == 'e') {
-				if (ch == 'q' and print_R0 > 3) print_R0 -= 1;
+				if (ch == 'q' and print_R0 > max(3, print_R1)) print_R0 -= 1;
 				if (ch == 'e' and print_R0 < 14) print_R0 += 1;
 				jump(3, 9 + nM);
 				col(0, 14);
