@@ -88,7 +88,7 @@ player: fyy
 
 ## To New World
 
-best record: 05s 914ms
+best record: 05s 648ms
 
 player: fyy
 
