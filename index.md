@@ -4,7 +4,7 @@ developer: fyy, g
 
 # Ball Speedrun Ranking List
 
-[level0 FirstRun](https://ballspeedrun.github.io/#firstrun)
+[level0 First Run](https://ballspeedrun.github.io/#first-run)
 
 [level1 2nd Run](https://ballspeedrun.github.io/#2nd-run)
 
@@ -12,7 +12,7 @@ developer: fyy, g
 
 [level3 Tree](https://ballspeedrun.github.io/#tree)
 
-[level4 It is Possible](https://ballspeedrun.github.io/#it-is-possible)
+[level4 It Is Possible](https://ballspeedrun.github.io/#it-is-possible)
 
 [level5 R U Sure](https://ballspeedrun.github.io/#r-u-sure)
 
@@ -32,7 +32,7 @@ developer: fyy, g
 
 [level13 Hello Tracker](https://ballspeedrun.github.io/#hello-tracker)
 
-## FirstRun:
+## First Run:
 
 best record: 00s 760ms
 
@@ -70,7 +70,7 @@ player: fyy
 
 <img height="40%" width="40%" src="https://ballspeedrun.github.io/ball-record/3.png"/>
 
-## It is Possible
+## It Is Possible
 
 best record: 02s 919ms
 
