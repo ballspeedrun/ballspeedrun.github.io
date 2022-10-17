@@ -112,9 +112,9 @@ player: none
 
 ## Mophie
 
-best record: 12s 742ms
+best record: 09s 873ms
 
-player: g
+player: fyy
 
 <img height="40%" width="40%" src="https://ballspeedrun.github.io/ball-record/9.png"/>
 
