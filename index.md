@@ -20,11 +20,21 @@ developer: fyy, g
 
 [level7 Useless Dash](https://ballspeedrun.github.io/#useless-dash)
 
+[level8 Temple](https://ballspeedrun.github.io/#temple)
+
+[level9 Mophie](https://ballspeedrun.github.io/#mophie)
+
+[level10 Bouncin Saloon](https://ballspeedrun.github.io/#bouncin-saloon)
+
+[level11 L](https://ballspeedrun.github.io/#l)
+
+[level12 Long one](https://ballspeedrun.github.io/#long-one)
+
 ## FirstRun:
 
-best record: 00s 770ms
+best record: 00s 760ms
 
-player: cmll
+player: fyy
 
 <img height="40%" width="40%" src="https://ballspeedrun.github.io/ball-record/0.png"/>
 
@@ -36,7 +46,7 @@ player: fyy
 
 ## 2nd Run
 
-best record: 03s 246ms
+best record: 04s 402ms
 
 player: fyy
 
@@ -60,9 +70,9 @@ player: fyy
 
 ## Beyond The Brick
 
-best record: 02s 858ms
+best record: none
 
-player: fyy
+player: none
 
 <img height="40%" width="40%" src="https://ballspeedrun.github.io/ball-record/4.png"/>
 
@@ -76,17 +86,11 @@ player: fyy
 
 ## To New World
 
-best record: 04s 969ms
+best record: 05s 914ms
 
 player: fyy
 
 <img height="40%" width="40%" src="https://ballspeedrun.github.io/ball-record/6.png"/>
-
-hack record: 04s 209ms
-
-player: fyy
-
-<img height="40%" width="40%" src="https://ballspeedrun.github.io/ball-record/6-hack.png"/>
 
 ## Useless Dash
 
@@ -95,3 +99,43 @@ best record: 05s 252ms
 player: fyy
 
 <img height="40%" width="40%" src="https://ballspeedrun.github.io/ball-record/7.png"/>
+
+## Temple
+
+best record: none
+
+player: none
+
+<img height="40%" width="40%" src="https://ballspeedrun.github.io/ball-record/8.png"/>
+
+## Mophie
+
+best record: 12s 742ms
+
+player: g
+
+<img height="40%" width="40%" src="https://ballspeedrun.github.io/ball-record/9.png"/>
+
+## Bouncin Saloon
+
+best record: 01s 810ms
+
+player: fyy
+
+<img height="40%" width="40%" src="https://ballspeedrun.github.io/ball-record/10.png"/>
+
+## L
+
+best record: 00s 921ms
+
+player: fyy
+
+<img height="40%" width="40%" src="https://ballspeedrun.github.io/ball-record/11.png"/>
+
+## Long one
+
+best record: 41s 290ms
+
+player: fyy
+
+<img height="40%" width="40%" src="https://ballspeedrun.github.io/ball-record/12.png"/>
