@@ -24,7 +24,7 @@ void jump(int x, int y) {
 	coord.Y = y;
 	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
 }
-char cls_str[6000];
+char cls_str[3000];
 bool cls_init = false;
 void getcls() {
 	cls_init = true;
