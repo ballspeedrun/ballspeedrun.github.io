@@ -1,4 +1,4 @@
-[Download Game](https://github.com/ballspeedrun/ballspeedrun.github.io)（点绿色的 `Code` 然后 Download Zip）。
+[Download Game](https://github.com/ballspeedrun/ballspeedrun.github.io)（点绿色的 `Code` 然后 Download Zip，然后运行 Ball/Ball_Parkour/Ball_beta.exe）。
 
 developer: fyy, g
 
