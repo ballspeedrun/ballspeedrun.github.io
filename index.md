@@ -122,7 +122,7 @@ player: fyy
 
 ## Bouncin Saloon
 
-best record: 01s 810ms
+best record: 01s 752ms
 
 player: fyy
 
