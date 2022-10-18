@@ -34,6 +34,8 @@ QQ 群号：670871016。
 
 [level13 Hello Tracker](https://ballspeedrun.github.io/#hello-tracker)
 
+[level14 Dungeon](https://ballspeedrun.github.io/#dungeon)
+
 ## First Run:
 
 best record: 00s 760ms
@@ -151,3 +153,11 @@ best record: 00s 944ms
 player: fyy
 
 <img height="40%" width="40%" src="https://ballspeedrun.github.io/ball-record/13.png"/>
+
+## Dungeon
+
+best record: 09s 238ms
+
+player: fyy
+
+<img height="40%" width="40%" src="https://ballspeedrun.github.io/ball-record/14.png"/>
