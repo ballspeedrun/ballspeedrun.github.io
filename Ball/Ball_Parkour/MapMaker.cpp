@@ -107,14 +107,14 @@ namespace project_2 {
 		jump(2, 30);
 		cout << "X: " << setw(3) << X << " Y: " << setw(3) << Y << '\n'; 
 	}
-	const char* levelin(int x) {
+	string levelin(int x) {
 		string s = "level", y;
 		stringstream ss;
 		ss << x;
 		ss >> y;
 		s = s + y;
 		s = s + ".in";
-		return s.c_str();
+		return s;
 	}
 	void work() {
 		init_obj();
@@ -124,7 +124,7 @@ namespace project_2 {
 		cout << "imput [nx] [ny] [level]: ";
 		cin >> nx >> ny >> level;
 		if (!nx and !ny) {
-			freopen(levelin(level), "r", stdin);
+			freopen(levelin(level).c_str(), "r", stdin);
 			cin >> nx >> ny;
 			for (int i = 0; i < nx; ++i) for (int j = 0; j < ny; ++j) {
 				cin >> g[i][j];
@@ -185,7 +185,7 @@ namespace project_2 {
 				cout << sobj[g[X][Y] + aux];
 			}
 		}
-		freopen(levelin(level), "w", stdout);
+		freopen(levelin(level).c_str(), "w", stdout);
 		cout << nx << ' ' << ny << '\n';
 		for (int i = 0; i < nx; ++i) {
 			for (int j = 0; j < ny; ++j) {
