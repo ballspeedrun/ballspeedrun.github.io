@@ -156,7 +156,7 @@ player: fyy
 
 ## Dungeon
 
-best record: 09s 238ms
+best record: 09s 132ms
 
 player: fyy
 
