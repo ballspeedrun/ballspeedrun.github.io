@@ -50,7 +50,7 @@ QQ 群号：670871016。
 
 ## First Run:
 
-best record: 00s 760ms
+best record: 00s 752ms
 
 player: fyy
 
@@ -80,7 +80,7 @@ player: fyy
 
 ## Tree
 
-best record: 25s 065ms
+best record: 22s 987ms
 
 player: fyy
 
@@ -136,7 +136,7 @@ player: fyy
 
 ## Bouncin Saloon
 
-best record: 01s 752ms
+best record: 01s 460ms
 
 player: fyy
 
