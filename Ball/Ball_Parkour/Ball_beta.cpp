@@ -121,6 +121,10 @@ namespace project_1 {
 		int t=get_tobj(x,y);
 		return t==2||t==3||t==4||t==5||t==6;
 	}
+	bool bot_side_b(int x,int y){
+		int t=get_tobj(x,y);
+		return t==2||t==4||t==5||t==6||(t==3&&get_g(x,y)!=-23);
+	}
 	int score;
 	bool win;
 	int X, Y, object;
@@ -418,7 +422,7 @@ namespace project_1 {
 				node un=rnid[u];
 				for(int i=0;i<4;i++){
 					node vn=un+node(dx[i],dy[i]);
-					if(!vn.valid()||sn.dis(vn)>d||bot_side(vn.x,vn.y))continue;
+					if(!vn.valid()||sn.dis(vn)>d||bot_side_b(vn.x,vn.y))continue;
 					int v=nid[id(vn)];
 					if(dis[v]==inf)dis[v]=dis[u]+1,que[++r]=v;
 				}
@@ -478,7 +482,6 @@ namespace project_1 {
 			a[to.x][to.y]=a[x][y];
 			g[x][y]=f[x][y];
 			x=to.x,y=to.y;
-			print();
 			if(node(x,y)==node(X,Y))botkill();
 		}
 		bool work1(){
@@ -502,7 +505,8 @@ namespace project_1 {
 			return 0;
 		}
 		bool work(){
-			if(dis2()<=d)return work1();
+			jump(0,31);
+			if(dis2()<=d&&dis1()!=inf)return work1();
 			return work2();
 		}
 	};
@@ -548,7 +552,9 @@ namespace project_1 {
 			while(x<sz)tmp.push_back(mq[x++]);
 			mq=tmp;
 			if(del.empty())break;
+			bf_d.work();
 		}
+		print();
 	}
 	void init_map() {
 		bot_clear();
