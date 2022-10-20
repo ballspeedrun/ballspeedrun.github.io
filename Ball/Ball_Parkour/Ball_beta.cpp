@@ -121,10 +121,6 @@ namespace project_1 {
 		int t=get_tobj(x,y);
 		return t==2||t==3||t==4||t==5||t==6;
 	}
-	bool bot_side_init(int x,int y){
-		int t=get_tobj(x,y);
-		return t==2||t==4||t==5||t==6;
-	}
 	int score;
 	bool win;
 	int X, Y, object;
@@ -422,30 +418,29 @@ namespace project_1 {
 				node un=rnid[u];
 				for(int i=0;i<4;i++){
 					node vn=un+node(dx[i],dy[i]);
-					if(!vn.valid()||sn.dis(vn)>d||bot_side_init(vn.x,vn.y))continue;
+					if(!vn.valid()||sn.dis(vn)>d||bot_side(vn.x,vn.y))continue;
 					int v=nid[id(vn)];
 					if(dis[v]==inf)dis[v]=dis[u]+1,que[++r]=v;
 				}
 			}
 		}
-		int dis[xn*xn][maxCnum];
+		int dis[maxCnum];
 		void init(int _d){
 			d=_d,cnum=d*d+(d+1)*(d+1);
-			for(int i=0;i<nx;i++)
-				for(int j=0;j<ny;j++){
-					for(int k=0;k<cnum;k++)
-						dis[id(i,j)][k]=inf;
-					idx=0;
-					for(int k=i-d;k<=i+d;k++)
-						for(int l=j-d;l<=j+d;l++){
-							if(node(i,j).dis(node(k,l))>d)continue;
-							rnid[idx]=node(k,l);
-							if(node(k,l).valid())nid[id(k,l)]=idx;
-							idx++;
-						}
-					assert(idx<=cnum);
-					bfs(nid[id(i,j)],dis[id(i,j)],d);
+		}
+		void work(){
+			idx=0;
+			for(int i=X-d;i<=X+d;i++)
+				for(int j=Y-d;j<=Y+d;j++){
+					if(node(X,Y).dis(node(i,j))>d)continue;
+					rnid[idx]=node(i,j);
+					if(node(i,j).valid())nid[id(i,j)]=idx;
+					idx++;
 				}
+			assert(idx==cnum);
+			for(int i=0;i<cnum;i++)
+				dis[i]=inf;
+			bfs(nid[id(X,Y)],dis,d);
 		}
 	}bf_d;
 	struct botfish{
@@ -461,7 +456,7 @@ namespace project_1 {
 			return bf_d.cnum-1-nid(_x+X,_y+Y);
 		}
 		int dis1(int _x,int _y){
-			return bf_d.dis[id(X,Y)][nid(_x,_y)];
+			return bf_d.dis[nid(_x,_y)];
 		}
 		int dis1(node _x){
 			return dis1(_x.x,_x.y);
@@ -536,7 +531,7 @@ namespace project_1 {
 	}
 	void bot_work(){
 		if((getTs()-bf_d.lwk)*1000<740)return;
-		bf_d.lwk=getTs();
+		bf_d.work(),bf_d.lwk=getTs();
 		vector<int>del,mq;
 		for(int i=0,sz=jelly.size();i<sz;i++)
 			mq.push_back(i);
