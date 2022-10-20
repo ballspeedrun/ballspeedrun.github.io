@@ -36,6 +36,18 @@ QQ 群号：670871016。
 
 [level14 Dungeon](https://ballspeedrun.github.io/#dungeon)
 
+[level15 Solution](https://ballspeedrun.github.io/#solution)
+
+[level16 GGEZ](https://ballspeedrun.github.io/#ggez)
+
+[level17 Smaugthegolden](https://ballspeedrun.github.io/#smaugthegolden)
+
+[level18 Lock](https://ballspeedrun.github.io/#lock)
+
+[level19 Cages](https://ballspeedrun.github.io/#cages)
+
+[level20 Top Understanding](https://ballspeedrun.github.io/#top-understanding)
+
 ## First Run:
 
 best record: 00s 760ms
@@ -161,3 +173,51 @@ best record: 09s 132ms
 player: fyy
 
 <img height="40%" width="40%" src="https://ballspeedrun.github.io/ball-record/14.png"/>
+
+## Solution
+
+best record: 34s 805ms
+
+player: fyy
+
+<img height="40%" width="40%" src="https://ballspeedrun.github.io/ball-record/15.png"/>
+
+## GGEZ
+
+best record: none
+
+player: none
+
+<img height="40%" width="40%" src="https://ballspeedrun.github.io/ball-record/16.png"/>
+
+## Smaugthegolden
+
+best record: none
+
+player: none
+
+<img height="40%" width="40%" src="https://ballspeedrun.github.io/ball-record/17.png"/>
+
+## Lock
+
+best record: 09s 954ms
+
+player: fyy
+
+<img height="40%" width="40%" src="https://ballspeedrun.github.io/ball-record/18.png"/>
+
+## Cages
+
+best record: 22s 440ms
+
+player: fyy
+
+<img height="40%" width="40%" src="https://ballspeedrun.github.io/ball-record/19.png"/>
+
+## Top Understanding
+
+best record: none
+
+player: none
+
+<img height="40%" width="40%" src="https://ballspeedrun.github.io/ball-record/20.png"/>
