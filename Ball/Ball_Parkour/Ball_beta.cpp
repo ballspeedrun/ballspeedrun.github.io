@@ -296,45 +296,46 @@ namespace project_1 {
 	void D() {
 		right(); 
 	}
-	void print_mode() {
+	int print_mode() {
 		cls();
 		jump(0, 0);
 		col(0, 11);
-		cout << " ¡ô select mode ¡ô        [W] [S] [¡ü] [¡ý]\n\n";
+		cout << "\n ¡ô select mode ¡ô        [W] [S] [¡ü] [¡ý] [K]\n\n";
 		for (int i = 0; i < nM; ++i) {
 			col(0, i == m ? 14 : 15);
 			cout << "   " << name[i] << '\n';
 		}
 		col(0, 11);
-		cout << "\n ¡ô select skin ¡ô      [A] [D] [¡û] [¡ú]\n\n";
+		cout << "\n ¡ô select skin ¡ô        [A] [D] [¡û] [¡ú]\n\n";
 		col(0, cobj[object + aux]);
 		cout << "   ¡ñ\n";
 		col(0, 11);
-		cout << "\n ¡ô select map size ¡ô  [Q] [E]\n\n";
+		cout << "\n ¡ô select map size ¡ô    [Q] [E]\n\n";
 		col(0, 14);
 		cout << "   " << print_R0 << '\n';
 		col(0, 11);
-		cout << "\n ¡ô select map range ¡ô [Z] [C]\n\n";
+		cout << "\n ¡ô select map range ¡ô   [Z] [C]\n\n";
 		col(0, 14);
 		cout << "   " << print_R1 << '\n';
 		for (; (ch = getch()); ) {
 			towasd();
-			if (ch == ' ') return;
+			if (ch == ' ') return 0;
+			if (ch == 'k') return 1;
 			if (ch == 'w') {
 				if (!m) continue;
-				jump(3, 2 + m);
+				jump(3, 3 + m);
 				col(0, 15);
 				cout << name[m--];
-				jump(3, 2 + m);
+				jump(3, 3 + m);
 				col(0, 14);
 				cout << name[m];
 			}
 			else if (ch == 's') {
 				if (m + 1 >= nM) continue;
-				jump(3, 2 + m);
+				jump(3, 3 + m);
 				col(0, 15);
 				cout << name[m++];
-				jump(3, 2 + m);
+				jump(3, 3 + m);
 				col(0, 14);
 				cout << name[m];
 			}
@@ -347,34 +348,25 @@ namespace project_1 {
 					object += 1;
 					if (object == 9) object = 1;
 				}
-				jump(3, 5 + nM);
+				jump(3, 6 + nM);
 				col(0, cobj[object + aux]);
 				cout << "¡ñ";
 			}
 			else if (ch == 'q' or ch == 'e') {
 				if (ch == 'q' and print_R0 > max(3, print_R1)) print_R0 -= 1;
 				if (ch == 'e' and print_R0 < 14) print_R0 += 1;
-				jump(3, 9 + nM);
+				jump(3, 10 + nM);
 				col(0, 14);
 				cout << print_R0 << "   "; 
 			}
 			else if (ch == 'z' or ch == 'c') {
 				if (ch == 'z' and print_R1 > 0) print_R1 -= 1;
 				if (ch == 'c' and print_R1 < print_R0) print_R1 += 1;
-				jump(3, 13 + nM);
+				jump(3, 14 + nM);
 				col(0, 14);
 				cout << print_R1 << "   "; 
 			}
 		}
-	}
-	string levelin(int x) {
-		string s = "level", y;
-		stringstream ss;
-		ss << x;
-		ss >> y;
-		s = s + y;
-		s = s + ".in";
-		return s;
 	}
 	const int maxD=10,inf=1e9,maxCnum=maxD*maxD+(maxD+1)*(maxD+1);
 	const int dx[4]={-1,1,0,0},dy[4]={0,0,-1,1};
@@ -554,6 +546,12 @@ namespace project_1 {
 		}
 		print();
 	}
+	string levelin(int x) {
+		stringstream s;
+		s << "level" << x << ".in";
+		return s.str();
+	}
+	bool skip0, skip1;
 	void init_map() {
 		bot_clear();
 		score = 0;
@@ -578,9 +576,7 @@ namespace project_1 {
 		freopen("CON", "r", stdin);
 		bot_init();
 	}
-	bool skip0, skip1;
-	void run() {
-		if (!skip0) print_mode();
+	void load_level() {
 		init_map();
 		auto T = getTs();
 		col(0, 15);
@@ -651,6 +647,44 @@ namespace project_1 {
 			return;
 		}
 	}
+	string rankin(int x) {
+		stringstream s;
+		s << "rank" << x << ".in";
+		return s.str();
+	}
+	string githublink(int x) {
+		stringstream s;
+		s << "start https://ballspeedrun.github.io/#" << x;
+		return s.str();
+	}
+	void load_rank() {
+		freopen(rankin(m).c_str(), "r", stdin);
+		int nr;
+		cin >> nr;
+		cls();
+		jump(0, 0);
+		col(0, 11);
+		cout << "\n ¡ô ranking ¡ô            [O]\n\n";
+		string s;
+		getline(cin, s);
+		for (int i = 0; i < nr; ++i) {
+			getline(cin, s);
+			col(0, i == 0 ? 14 : i == 1 ? 15 : i == 2 ? 6 : 8);
+			cout << "   " << s << '\n';
+		}
+		freopen("CON", "r", stdin);
+		s = githublink(m);
+		while (true) if (kbhit()) {
+			ch = getch();
+			towasd();
+			if (ch == 27) return;
+			if (ch == 'o') system(s.c_str());
+		}
+	}
+	void run() {
+		if (skip0 or !print_mode()) load_level();
+		else load_rank();
+	}
 	void work() {
 		init_obj();
 		init_modes();
@@ -708,7 +742,7 @@ int main() {
 	cout << fixed << setprecision(3);
 	HideCursor();
 	system("title Ball Parkour");
-	system("mode con cols=60 lines=36");
+	system("mode con cols=60 lines=40");
 	play();
 	return 0;
 }
