@@ -296,8 +296,6 @@ namespace project_1 {
 	void D() {
 		right(); 
 	}
-	void S() {
-	}
 	void print_mode() {
 		cls();
 		jump(0, 0);
@@ -594,6 +592,9 @@ namespace project_1 {
 		}
 		jump(20, 29 + 1);
 		cout << "score : 0";
+		col(0, 14);
+		jump(20, 29 + 3);
+		cout << "[S] : ";
 		for (; !win; ) {
 			if (kbhit()) {
 				ch = getch();
@@ -602,12 +603,16 @@ namespace project_1 {
 				if (ch == 'r') return skip1 = true, void();
 				if (ch == 'w') W();
 				else if (ch == 'a') A();
-				else if (ch == 's') S();
 				else if (ch == 'd') D();
+				else if (ch == 's') {
+					col(0, 14);
+					jump(26, 29 + 3);
+					cout << getTs() - T;
+				}
 			}
 			free();
 			bot_work();
-			if(bot_rinit)bot_reinit();
+			if(bot_rinit) bot_reinit();
 			col(0, 15);
 			jump(7, 29 + 1);
 			cout << getTs() - T;
@@ -653,7 +658,7 @@ namespace project_1 {
 		object = 1;
 		skip0 = skip1 = false;
 		print_R0 = 14;
-		print_R1 = 8;
+		print_R1 = 0;
 		for (; true; ) {
 			skip0 = skip1;
 			skip1 = false;
