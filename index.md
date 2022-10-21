@@ -6,49 +6,51 @@ QQ 群号：670871016。
 
 # Ball Speedrun Ranking List
 
-[level0 First Run](https://ballspeedrun.github.io/#first-run)
+[level0 First Run](https://ballspeedrun.github.io/#0)
 
-[level1 2nd Run](https://ballspeedrun.github.io/#2nd-run)
+[level1 2nd Run](https://ballspeedrun.github.io/#1)
 
-[level2 Vine Lover](https://ballspeedrun.github.io/#vine-lover)
+[level2 Vine Lover](https://ballspeedrun.github.io/#2)
 
-[level3 Tree](https://ballspeedrun.github.io/#tree)
+[level3 Tree](https://ballspeedrun.github.io/#3)
 
-[level4 It Is Possible](https://ballspeedrun.github.io/#it-is-possible)
+[level4 It Is Possible](https://ballspeedrun.github.io/#4)
 
-[level5 R U Sure](https://ballspeedrun.github.io/#r-u-sure)
+[level5 R U Sure](https://ballspeedrun.github.io/#5)
 
-[level6 To New World](https://ballspeedrun.github.io/#to-new-world)
+[level6 To New World](https://ballspeedrun.github.io/#6)
 
-[level7 Useless Dash](https://ballspeedrun.github.io/#useless-dash)
+[level7 Useless Dash](https://ballspeedrun.github.io/#7)
 
-[level8 Temple](https://ballspeedrun.github.io/#temple)
+[level8 Temple](https://ballspeedrun.github.io/#8)
 
-[level9 Mophie](https://ballspeedrun.github.io/#mophie)
+[level9 Mophie](https://ballspeedrun.github.io/#9)
 
-[level10 Bouncin Saloon](https://ballspeedrun.github.io/#bouncin-saloon)
+[level10 Bouncin Saloon](https://ballspeedrun.github.io/#10)
 
-[level11 L](https://ballspeedrun.github.io/#l)
+[level11 L](https://ballspeedrun.github.io/#11)
 
-[level12 Long one](https://ballspeedrun.github.io/#long-one)
+[level12 Long one](https://ballspeedrun.github.io/#12)
 
-[level13 Hello Tracker](https://ballspeedrun.github.io/#hello-tracker)
+[level13 Hello Tracker](https://ballspeedrun.github.io/#13)
 
-[level14 Dungeon](https://ballspeedrun.github.io/#dungeon)
+[level14 Dungeon](https://ballspeedrun.github.io/#14)
 
-[level15 Solution](https://ballspeedrun.github.io/#solution)
+[level15 Solution](https://ballspeedrun.github.io/#15)
 
-[level16 GGEZ](https://ballspeedrun.github.io/#ggez)
+[level16 GGEZ](https://ballspeedrun.github.io/#16)
 
-[level17 Smaugthegolden](https://ballspeedrun.github.io/#smaugthegolden)
+[level17 Smaugthegolden](https://ballspeedrun.github.io/#17)
 
-[level18 Lock](https://ballspeedrun.github.io/#lock)
+[level18 Lock](https://ballspeedrun.github.io/#18)
 
-[level19 Cages](https://ballspeedrun.github.io/#cages)
+[level19 Cages](https://ballspeedrun.github.io/#19)
 
-[level20 Top Understanding](https://ballspeedrun.github.io/#top-understanding)
+[level20 Top Understanding](https://ballspeedrun.github.io/#20)
 
-## First Run:
+<h2 id = "0">First Run</h2>
+
+author : g
 
 best record: 00s 752ms
 
@@ -62,7 +64,9 @@ player: fyy
 
 <img height="40%" width="40%" src="https://ballspeedrun.github.io/ball-record/0-hack.png"/>
 
-## 2nd Run
+<h2 id = "1">2nd Run</h2>
+
+author : g
 
 best record: 04s 402ms
 
@@ -70,7 +74,9 @@ player: fyy
 
 <img height="40%" width="40%" src="https://ballspeedrun.github.io/ball-record/1.png"/>
 
-## Vine Lover
+<h2 id = "2">Vine Lover</h2>
+
+author : g
 
 best record: 08s 300ms
 
@@ -78,7 +84,9 @@ player: fyy
 
 <img height="40%" width="40%" src="https://ballspeedrun.github.io/ball-record/2.png"/>
 
-## Tree
+<h2 id = "3">Tree</h2>
+
+author : g
 
 best record: 22s 987ms
 
@@ -86,7 +94,9 @@ player: fyy
 
 <img height="40%" width="40%" src="https://ballspeedrun.github.io/ball-record/3.png"/>
 
-## It Is Possible
+<h2 id = "4">It Is Possible</h2>
+
+author : fyy
 
 best record: 02s 919ms
 
@@ -94,7 +104,9 @@ player: fyy
 
 <img height="40%" width="40%" src="https://ballspeedrun.github.io/ball-record/4.png"/>
 
-## R U Sure
+<h2 id = "5">R U Sure</h2>
+
+author : g
 
 best record: 15s 415ms
 
@@ -102,7 +114,9 @@ player: fyy
 
 <img height="40%" width="40%" src="https://ballspeedrun.github.io/ball-record/5.png"/>
 
-## To New World
+<h2 id = "6">To New World</h2>
+
+author : g
 
 best record: 05s 648ms
 
@@ -110,7 +124,9 @@ player: fyy
 
 <img height="40%" width="40%" src="https://ballspeedrun.github.io/ball-record/6.png"/>
 
-## Useless Dash
+<h2 id = "7">Useless Dash</h2>
+
+author : fyy
 
 best record: 05s 252ms
 
@@ -118,7 +134,9 @@ player: fyy
 
 <img height="40%" width="40%" src="https://ballspeedrun.github.io/ball-record/7.png"/>
 
-## Temple
+<h2 id = "8">Temple</h2>
+
+author : g
 
 best record: 53m 59s 906ms
 
@@ -126,7 +144,9 @@ player: g
 
 <img height="40%" width="40%" src="https://ballspeedrun.github.io/ball-record/8.png"/>
 
-## Mophie
+<h2 id = "9">Mophie</h2>
+
+author : g
 
 best record: 09s 873ms
 
@@ -134,7 +154,9 @@ player: fyy
 
 <img height="40%" width="40%" src="https://ballspeedrun.github.io/ball-record/9.png"/>
 
-## Bouncin Saloon
+<h2 id = "10">Bouncin Saloon</h2>
+
+author : g
 
 best record: 01s 460ms
 
@@ -142,7 +164,9 @@ player: fyy
 
 <img height="40%" width="40%" src="https://ballspeedrun.github.io/ball-record/10.png"/>
 
-## L
+<h2 id = "11">L</h2>
+
+author : l
 
 best record: 00s 921ms
 
@@ -150,7 +174,9 @@ player: fyy
 
 <img height="40%" width="40%" src="https://ballspeedrun.github.io/ball-record/11.png"/>
 
-## Long one
+<h2 id = "12">Long One</h2>
+
+author : g
 
 best record: 41s 290ms
 
@@ -158,7 +184,9 @@ player: fyy
 
 <img height="40%" width="40%" src="https://ballspeedrun.github.io/ball-record/12.png"/>
 
-## Hello Tracker
+<h2 id = "13">Hello Tracker</h2>
+
+author : fyy
 
 best record: 00s 944ms
 
@@ -166,7 +194,9 @@ player: fyy
 
 <img height="40%" width="40%" src="https://ballspeedrun.github.io/ball-record/13.png"/>
 
-## Dungeon
+<h2 id = "14">Dungeon</h2>
+
+author : g
 
 best record: 09s 132ms
 
@@ -174,7 +204,9 @@ player: fyy
 
 <img height="40%" width="40%" src="https://ballspeedrun.github.io/ball-record/14.png"/>
 
-## Solution
+<h2 id = "15">Solution</h2>
+
+author : g
 
 best record: 34s 805ms
 
@@ -182,7 +214,9 @@ player: fyy
 
 <img height="40%" width="40%" src="https://ballspeedrun.github.io/ball-record/15.png"/>
 
-## GGEZ
+<h2 id = "16">GGEZ</h2>
+
+author : mer
 
 best record: none
 
@@ -190,7 +224,9 @@ player: none
 
 <img height="40%" width="40%" src="https://ballspeedrun.github.io/ball-record/16.png"/>
 
-## Smaugthegolden
+<h2 id = "17">Smaugthegolden</h2>
+
+author : g
 
 best record: none
 
@@ -198,7 +234,9 @@ player: none
 
 <img height="40%" width="40%" src="https://ballspeedrun.github.io/ball-record/17.png"/>
 
-## Lock
+<h2 id = "18">Lock</h2>
+
+author : g
 
 best record: 09s 954ms
 
@@ -206,7 +244,9 @@ player: fyy
 
 <img height="40%" width="40%" src="https://ballspeedrun.github.io/ball-record/18.png"/>
 
-## Cages
+<h2 id = "19">Cages</h2>
+
+author : g
 
 best record: 22s 440ms
 
@@ -214,7 +254,9 @@ player: fyy
 
 <img height="40%" width="40%" src="https://ballspeedrun.github.io/ball-record/19.png"/>
 
-## Top Understanding
+<h2 id = "20">Top Understanding</h2>
+
+author : fyy
 
 best record: none
 
