@@ -160,6 +160,15 @@ namespace project_1 {
 		return a.time > b.time;
 	}
 	priority_queue<repr> Q;
+	void colly(int x, pair<int, int> y = {-1, -1}) {
+		int t = tobj[x + aux];
+		if (t == 7) {
+			cnt_up = min(cnt_up, 1);
+			Q.push(repr{getTs() + 3, x, make_pair(X, Y)});
+		}
+		else if (t == 8) reduct(y.first, y.second);
+		else if (t == 6 and score >= y.first) win = true;
+	}
 	void moveto(int x, int y) {
 		reduct(X, Y);
 		if (get_tobj(x, y) == 3) {
@@ -170,13 +179,7 @@ namespace project_1 {
 		} 
 		tie(x, y) = exfind(x, y);
 		place(x, y);
-		int t = get_tobj(X, Y);
-		if (t == 7) {
-			cnt_up = min(cnt_up, 1);
-			Q.push(repr{getTs() + 3, g[X][Y], make_pair(X, Y)});
-		}
-		else if (t == 8) reduct(a[X][Y].first, a[X][Y].second);
-		else if (t == 6 and score >= a[X][Y].first) win = true;
+		colly(g[X][Y], a[X][Y]);
 		print();
 	}
 	void botkill() {
@@ -621,7 +624,8 @@ namespace project_1 {
 			free();
 			for (; N(Q) and Q.top().time <= cur; Q.pop()) {
 				auto u = Q.top();
-				g[u.p.first][u.p.second] = u.x;
+				if (X == u.p.first and Y == u.p.second) colly(u.x);
+				else g[u.p.first][u.p.second] = u.x;
 			}
 			bot_work();
 			if(bot_rinit) bot_reinit();
