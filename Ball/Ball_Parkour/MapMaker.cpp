@@ -129,7 +129,7 @@ namespace project_2 {
 			for (int i = 0; i < nx; ++i) for (int j = 0; j < ny; ++j) {
 				cin >> g[i][j];
 				int t = tobj[g[i][j] + aux];
-				if (t == 3) cin >> a[i][j].first >> a[i][j].second;      
+				if (t == 3 or t == 8) cin >> a[i][j].first >> a[i][j].second;      
 				else if (t == 6) cin >> a[i][j].first;
 			}
 			freopen("CON", "r", stdin);
@@ -191,9 +191,9 @@ namespace project_2 {
 			for (int j = 0; j < ny; ++j) {
 				cout << g[i][j] << '\t';
 				int t = tobj[g[i][j] + aux];
-				if (t == 3 or t == 6) cout << a[i][j].first;
+				if (t == 3 or t == 6 or t == 8) cout << a[i][j].first;
 				cout << '\t';
-				if (t == 3) cout << a[i][j].second;
+				if (t == 3 or t == 8) cout << a[i][j].second;
 				cout << '\t';
 			}
 			cout << '\n';
