@@ -166,8 +166,14 @@ namespace project_1 {
 			cnt_up = min(cnt_up, 1);
 			Q.push(repr{getTs() + 3, x, make_pair(X, Y)});
 		}
-		else if (t == 8) reduct(y.first, y.second);
-		else if (t == 6 and score >= y.first) win = true;
+		else if (t == 8) {
+			reduct(y.first, y.second);
+			print();	
+		}
+		else if (t == 6) {
+			if (score >= y.first) win = true;
+			Q.push(repr{getTs() + 3, x, make_pair(X, Y)});
+		}
 	}
 	void moveto(int x, int y) {
 		reduct(X, Y);
@@ -380,6 +386,7 @@ namespace project_1 {
 				cout << print_R1 << "   "; 
 			}
 		}
+		return 0;
 	}
 	const int maxD=10,inf=1e9,maxCnum=maxD*maxD+(maxD+1)*(maxD+1);
 	const int dx[4]={-1,1,0,0},dy[4]={0,0,-1,1};
@@ -569,6 +576,7 @@ namespace project_1 {
 		bot_clear();
 		score = 0;
 		win = false;
+		while (N(Q)) Q.pop();
 		freopen(levelin(m).c_str(), "r", stdin);
 		cin >> nx >> ny;
 		for (int i = 0; i < nx; ++i) for (int j = 0; j < ny; ++j) {
