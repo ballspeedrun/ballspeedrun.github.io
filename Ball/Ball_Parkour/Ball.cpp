@@ -119,11 +119,11 @@ namespace project_1 {
 	}
 	bool bot_side(int x,int y){
 		int t=get_tobj(x,y);
-		return t==2||t==3||t==4||t==5||t==6;
+		return t==2||t==3||t==4||t==5||t==6||t==7||t==8;
 	}
 	bool bot_side_b(int x,int y){
 		int t=get_tobj(x,y);
-		return t==2||t==4||t==5||t==6||(t==3&&get_g(x,y)!=-23);
+		return t==2||t==4||t==5||t==6||t==7||t==8||(t==3&&get_g(x,y)!=-23);
 	}
 	int score;
 	bool win;
