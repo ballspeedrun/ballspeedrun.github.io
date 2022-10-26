@@ -117,13 +117,13 @@ namespace project_1 {
 		auto t = real_tobj(x, y);
 		return t == 2 or t == 5 or t == 4;
 	}
-	bool bot_side(int x,int y){
-		int t=get_tobj(x,y);
-		return t==2||t==3||t==4||t==5||t==6||t==7||t==8;
+	bool bot_side(int x,int y) {
+		int t = get_tobj(x, y);
+		return t == 2 or t == 3 or t == 4 or t == 5 or t == 6;
 	}
-	bool bot_side_b(int x,int y){
-		int t=get_tobj(x,y);
-		return t==2||t==4||t==5||t==6||t==7||t==8||(t==3&&get_g(x,y)!=-23);
+	bool bot_side_b(int x,int y) {
+		int t = get_tobj(x, y);
+		return t == 2 or t == 4 or t == 5 or t == 6 or (t == 3 and get_g(x, y) != -23);
 	}
 	int score;
 	bool win;
@@ -174,6 +174,15 @@ namespace project_1 {
 			if (score >= y.first) win = true;
 			Q.push(repr{getTs() + 3, x, make_pair(X, Y)});
 		}
+	}
+	void colly_bot(int x, pair<int, int> y = {-1, -1}) {
+		int t = tobj[x + aux];
+		if (t == 6) Q.push(repr{getTs() + 3, x, make_pair(X, Y)});
+		else if (t == 8) {
+			reduct(y.first, y.second);
+			print();
+		}
+		else if (t == 7) Q.push(repr{getTs() + 3, x, make_pair(X, Y)});
 	}
 	void moveto(int x, int y) {
 		reduct(X, Y);
@@ -323,11 +332,11 @@ namespace project_1 {
 		cls();
 		jump(0, 0);
 		col(0, 11);
-		cout << "\n ¡ô select mode ¡ô        [W] [S] [¡ü] [¡ý] [K]\n\n";
+		cout << "\n ¡ô select mode ¡ô        [¡ü] [¡ý] [K]\n\n";
 		col(0, 14);
 		cout << "   " << name[m] << '\n';
 		col(0, 11);
-		cout << "\n ¡ô select skin ¡ô        [A] [D] [¡û] [¡ú]\n\n";
+		cout << "\n ¡ô select skin ¡ô        [¡û] [¡ú]\n\n";
 		col(0, cobj[object + aux]);
 		cout << "   ¡ñ\n";
 		col(0, 11);
@@ -388,14 +397,14 @@ namespace project_1 {
 		}
 		return 0;
 	}
-	const int maxD=10,inf=1e9,maxCnum=maxD*maxD+(maxD+1)*(maxD+1);
-	const int dx[4]={-1,1,0,0},dy[4]={0,0,-1,1};
-	struct node{
-		int x,y;
-		node(int _x=0,int _y=0){x=_x,y=_y;}
-		node(pair<int,int>_x){x=_x.first,y=_x.second;}
-		int dis(node o){
-			return abs(x-o.x)+abs(y-o.y);
+	constexpr int maxD = 10, inf = 1e9, maxCnum = maxD * maxD + (maxD + 1) * (maxD + 1);
+	constexpr int dx[4] = {-1, 1, 0, 0}, dy[4] = {0, 0, -1, 1};
+	struct node {
+		int x, y;
+		node(int _x = 0, int _y = 0) { x = _x, y = _y; }
+		node(pair<int,int> _x){ x = _x.first, y = _x.second; }
+		int dis(node o) {
+			return abs(x - o.x) + abs(y - o.y);
 		}
 		friend bool operator==(node x,node y){
 			return x.x==y.x&&x.y==y.y;
@@ -488,6 +497,7 @@ namespace project_1 {
 			return dis2(x,y);
 		}
 		void move(node to){
+			colly_bot(g[to.x][to.y], a[to.x][to.y]);
 			g[to.x][to.y]=g[x][y];
 			a[to.x][to.y]=a[x][y];
 			g[x][y]=f[x][y];
@@ -571,12 +581,7 @@ namespace project_1 {
 		s << "level" << x << ".in";
 		return s.str();
 	}
-	bool skip0, skip1;
-	void init_map() {
-		bot_clear();
-		score = 0;
-		win = false;
-		while (N(Q)) Q.pop();
+	void load_map() {
 		freopen(levelin(m).c_str(), "r", stdin);
 		cin >> nx >> ny;
 		for (int i = 0; i < nx; ++i) for (int j = 0; j < ny; ++j) {
@@ -587,6 +592,15 @@ namespace project_1 {
 			else if (t == 1) init(i, j);
 			else if (t == 6) cin >> a[i][j].first;
 		}
+		freopen("CON", "r", stdin);
+	}
+	bool skip0, skip1;
+	void init_map() {
+		bot_clear();
+		score = 0;
+		win = false;
+		while (N(Q)) Q.pop();
+		load_map();
 		for(int i=0;i<nx;i++)
 			for(int j=0;j<ny;j++)
 				if(g[i][j]==-23)jelly.push_back(botfish(i,j)),f[i][j]=0;
@@ -595,7 +609,6 @@ namespace project_1 {
 		print_x = print_y = -1;
 		memset(print_g, 0, sizeof print_g);
 		print();
-		freopen("CON", "r", stdin);
 		bot_init();
 	}
 	void load_level() {
@@ -632,7 +645,9 @@ namespace project_1 {
 			free();
 			for (; N(Q) and Q.top().time <= cur; Q.pop()) {
 				auto u = Q.top();
-				if (X == u.p.first and Y == u.p.second) colly(u.x);
+				int x = u.p.first, y = u.p.second;
+				if (x == X and y == Y) colly(u.x);
+				else if (get_tobj(x, y)) colly_bot(u.x);
 				else g[u.p.first][u.p.second] = u.x;
 			}
 			bot_work();
